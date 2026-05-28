@@ -1,0 +1,34 @@
+managed implementation in class zbp_i_travel_wa unique;
+strict ( 2 );
+
+define behavior for ZI_TRAVEL_WA alias Viagem
+persistent table ztraveldb_wa
+lock master
+authorization master ( instance )
+etag master UltimaModificacaoEmLocal
+
+{
+  create;
+  update;
+  delete;
+
+   mapping for ztraveldb_wa
+    {
+      ViagemID                 = viagem_id;
+      AgenciaID                = Agencia_id;
+      ClienteID                = Cliente_id;
+      DataInicio               = data_inicio;
+      DataFim                  = data_fim;
+      TaxaReserva              = taxa_reserva;
+      PrecoTotal               = preco_total;
+      CodigoMoeda              = codigo_moeda;
+      Descricao                = Descricao;
+      StatusViagem             = status_geral;
+      CriadoPor                = criado_por;
+      CriadoEm                 = criado_em;
+      UltimaModificacaoPor     = ultima_modificacao_por;
+      UltimaModificacaoEm      = ultima_modificacao_em;
+      UltimaModificacaoEmLocal = ultima_modificacao_em_local;
+    }
+
+}

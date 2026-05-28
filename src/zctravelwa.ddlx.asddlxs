@@ -1,0 +1,50 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo: { 
+  typeNamePlural: 'Viagens',
+  typeName: 'Viagem',
+  title: { type: #STANDARD, value: 'Descricao' },
+  description: { type: #STANDARD, value: 'ViagemID' }
+}
+
+annotate view ZC_TRAVEL_WA with
+{
+  @UI.facet: [{
+    label: 'Detalhes da Viagem',
+    id: 'InfoGeral',
+    type: #IDENTIFICATION_REFERENCE,
+    purpose: #STANDARD
+  }]
+
+  @UI.identification: [{ position: 10, label: 'ID da Viagem' }]
+  @UI.selectionField: [{ position: 10 }]
+  ViagemID;
+
+  @UI.identification: [{ position: 20, label: 'Agência' }]
+  @UI.selectionField: [{ position: 20 }]
+  AgenciaID;
+
+  @UI.identification: [{ position: 30, label: 'Cliente' }]
+  @UI.selectionField: [{ position: 30 }]
+  ClienteID;
+
+  @UI.identification: [{ position: 40, label: 'Data Início' }]
+  DataInicio;
+
+  @UI.identification: [{ position: 50, label: 'Data Fim' }]
+  DataFim;
+
+  @UI.identification: [{ position: 60, label: 'Taxa de Reserva' }]
+  TaxaReserva;
+
+  @UI.identification: [{ position: 70, label: 'Preço Total' }]
+  PrecoTotal;
+
+  @UI.identification: [{ position: 80, label: 'Moeda' }]
+  CodigoMoeda;
+
+  @UI.identification: [{ position: 90, label: 'Descrição' }]
+  Descricao;
+
+  @UI.identification: [{ position: 100, label: 'Status' }]
+  StatusViagem;
+}

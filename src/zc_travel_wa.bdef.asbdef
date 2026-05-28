@@ -1,0 +1,10 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_TRAVEL_WA alias Viagem
+{
+  use create;
+  use update;
+  use delete;
+
+}
